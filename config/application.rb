@@ -1,5 +1,4 @@
 require_relative 'boot'
-
 require "rails"
 require "active_model/railtie"
 require "active_job/railtie"
@@ -15,22 +14,17 @@ Bundler.require(*Rails.groups)
 
 module RailsDemo
   class Application < Rails::Application
-    
-    config.load_defaults 5.2
+    config.load_defaults 5.1
     config.generators.system_tests = nil
-  end
-end
 
-
-class Application < Rails::Application
-  config.load_defaults 5.1
-  config.generators do |generate|
-    generate.helper false
-    generate.assets false
-    generate.view_specs false
-    generate.helper_specs false
-    generate.routing_specs false
-    generate.controller_specs false
-    generate.system_tests false
+    config.generators do |generate|
+      generate.helper false
+      generate.assets false
+      generate.view_specs false
+      generate.helper_specs false
+      generate.routing_specs false
+      generate.controller_specs false
+      generate.system_tests false
+    end
   end
 end
