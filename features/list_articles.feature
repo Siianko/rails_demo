@@ -7,7 +7,7 @@ Scenario: View list of articles on the landing page
     Given the following articles exist
     | title                 | content                          |
     | A breaking news item  | Some really breaking action      |
-    | Learn Rail 5          | Build awesome rails applications |
+    | Learn Rails 5          | Build awesome rails applications |
 
     When I visit the site
     Then I should see "A breaking news item"
